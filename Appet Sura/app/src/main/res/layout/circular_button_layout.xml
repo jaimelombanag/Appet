@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/button_size"
+    android:layout_height="@dimen/button_size"
+    android:background="@drawable/circular_button"
+    android:stateListAnimator="@drawable/button_elevation"
+    android:clickable="true"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circular_button_ripple_selector"
+        android:textColor="@color/colorAccent"
+        android:duplicateParentState="true"
+        android:gravity="center"
+
+        tools:textColor="#000"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+
+
+</FrameLayout>
+

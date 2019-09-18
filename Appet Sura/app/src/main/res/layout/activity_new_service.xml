@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/layout_servicio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            />
+
+        <com.civicar.usuario.Clases.CircleOverlayView
+            android:id="@+id/cicleOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.civicar.usuario.Clases.CircleOverlayView>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SOLICITANDO SERVICIO"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscando vehículo..."
+            android:textColor="@color/colorBlanco"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"/>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="800dp"
+            android:layout_height="800dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:max="45"
+            android:progress="0"
+            android:progressDrawable="@drawable/progresscircle"/>
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Cancelar"
+        android:onClick="CancelarServicio"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/fondo_redondeado"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Sura Pet</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="cancel">CANCELAR</string>
+    <string name="ok">CONFIRMAR</string>
+    <string name="enter_location_hint">Ingrese su Destino</string>
+
+
+    <string name="place_details">
+    <![CDATA[
+        <b>%1$s</b>
+        <br/>
+        <i>Place Id: %2$s</i>
+        <br/>
+        Address: %3$s
+        <br/>
+        Phone: %4$s
+        <br/>
+        Website: %5$s
+        <br/>
+        Latitud: %6$s
+        <br/>
+        Longitud: %7$s
+    ]]>
+    </string>
+    <string name="title_activity_maps_arama">Map</string>
+
+    <string name="terminos_condiciones"><u>Terminos y Condiciones</u></string>
+
+    <string name="losterminos">Apreciado usuario, los datos registrados serán tratados de acuerdo a
+
+        la política de protección de datos.
+
+        TRANS ARAMA S.A.S, se permite comunicar que la información personal aquí contenida,
+        será tratada conforme a la política de protección de datos, de acuerdo con el artículo 10
+        del Decreto 1377 del 2013 y en cumplimiento a la ley 1581 de 2012, solicita la
+        autorización de dichos titulares para que de manera libre, previa, expresa, voluntaria, y
+        debidamente informada permitan a todos los servicios y dependencias de TRANSARAMA
+        S.A.S. continuar con el almacenamiento, uso, circulación y tratamiento de sus datos,
+        información que es y será utilizada en el desarrollo de las funciones propias de
+        TRANSARAMA S.A.S. en los servicios que ofrece a los afiliados, colaboradores,
+        proveedores, terceros, usuarios y otros interesados, por sí misma o mediante su encargo
+        a terceros como integrante del Sistema de Protección Social.
+        Los titulares de la información podrán ejercer sus derechos a autorizar, conocer,
+        actualizar, rectificar, suprimir la información suministrada o revocar la autorización
+        otorgada mediante el envío de una comunicación escrita a las oficinas ubicadas en la
+        calle 63B N° 71c-98 esquina, , en la ciudad de Bogotá, o al correo
+        electrónico: info@transarama.com.
+        La solicitud de supresión de la información y la revocatoria de la autorización no
+        procederán cuando el titular tenga un vínculo, obligación legal o contractual de
+        permanecer en la base de datos de TRANSARAMA S.A.S.</string>
+
+</resources>

@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.fasepi.android.appet.usuario"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1001
+        versionName "1.0.1"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    signingConfigs {
+        release {
+            //storeFile file("C:\\Users\\jalombanag.LOSUNOS\\Documents\\Jaime Lombana\\R.W.T\\llavefirma.jks")
+            //storeFile file("C:\\Users\\Jaime\\Documents\\RightWay Tec\\Llave PlayStore\\rightway.jks")
+            storeFile file("/Users/jaimelombana/Documents/Llaves PlayStore/LlaveAramaFasePi.jks")
+            storePassword "Fasepi2017"
+            keyAlias "Arama"
+            keyPassword "Arama2017"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            //debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    compile project(':drawroutemap')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services:11.0.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'com.github.dbachelder:CreditCardEntry:1.4.7'
+
+
+
+}
+
+
+
+
+
+
+
+
+
+

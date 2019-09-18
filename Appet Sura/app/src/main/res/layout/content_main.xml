@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.fasepi.android.appet.usuario.Actividades.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+
+   <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ruta.rightway.com.paraderosruta.Actividades.MainActivity"
+        android:layout_alignParentBottom="true" />
+
+    L
+    <!--     LAYOUT PRINCIPAL     -->
+    <LinearLayout
+        android:id="@+id/layout_principal"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        >
+
+        <!--     LAYOUT DE LOS BOTONES DE APPET     -->
+        <LinearLayout
+            android:id="@+id/layout_botonesAppet"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_historico"
+                android:onClick="Historico"/>
+
+
+            <ImageButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/boton_geocerca"
+                android:onClick="Geocerca"
+                />
+
+        </LinearLayout>
+
+        <!--     LAYOUT DE LA GEOCERCA      -->
+        <LinearLayout
+            android:id="@+id/layout_geocerca"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <SeekBar
+                android:id="@+id/bar_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="1"
+                android:max="10"
+                style="@style/CustomSeekBar"
+                android:secondaryProgress="10"
+                android:layout_margin="5dip" />
+
+            <TextView
+                android:id="@+id/txt_metros_geocerca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 metros"
+                android:textColor="@color/colorBlanco"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+
+        </LinearLayout>
+
+        <!--     LAYOUT HISTORICO     -->
+        <LinearLayout
+            android:id="@+id/layout_historico"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+            <Button
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="EndHistorico"
+                android:text="SALIR DE HISTORICO"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.7"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/txt_destino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Buscando... "
+                android:textColor="@color/colorBlanco"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/txt_fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Buscando... "
+                android:textColor="@color/colorBlanco"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/txt_nombre_conductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:text="Buscando... "
+                android:textColor="@color/colorBlanco"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+                android:id="@+id/txt_datos_vehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Buscando... "
+                android:textColor="@color/colorBlanco"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <TextView
+                android:id="@+id/txt_distancia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Buscando... "
+                android:textColor="@color/colorBlanco"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <!--     LAYOUT CON SERVICIO1     -->
+    <LinearLayout
+        android:id="@+id/layout_con_servicio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorNegroTrasparente"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/txt_nombre_pasajero"
+            android:textColor="@color/colorBlanco"
+            android:text="ALEJANDRO"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/img_origen_destino"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/user"/>
+
+            <TextView
+                android:id="@+id/txt_origen_destino"
+                android:textColor="@color/colorBlanco"
+                android:text="Cra. 50  # 5f- 33 a 5F - 99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/layout_opciones_servicio">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:onClick="LlamarUsuario">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/call"/>
+
+                <TextView
+                    android:textColor="@color/colorBlanco"
+                    android:text="LLAMAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:onClick="MensajeUsuario">
+                <TextView
+                    android:textColor="@color/colorBlanco"
+                    android:text="MENSAJE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginLeft="130dp"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/message"
+                    android:layout_marginLeft="5dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--     LAYOUT CON SERVICIO2     -->
+    <LinearLayout
+        android:id="@+id/layout_con_servicio2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <Button
+            android:id="@+id/btn1_con_servicio"
+            android:text="HE LLEGADO"
+            android:textColor="@color/colorBlanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/fondo_redondeado_rojo"
+            android:layout_marginBottom="10dp"
+            android:onClick="HeLLegado"/>
+        <Button
+            android:id="@+id/btn2_con_servicio"
+            android:text="CANCELAR"
+            android:textColor="@color/colorBlanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/fondo_redondeado_rojo"
+            android:onClick="CancelarFin"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_establecer_geocerca"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/boton_establecer_geocerca"
+        android:onClick="EstableceGeocerca"
+        android:visibility="gone"/>
+
+
+</FrameLayout>
